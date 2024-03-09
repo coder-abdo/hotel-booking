@@ -5,6 +5,7 @@ import { Logo } from "./logo";
 import { ModeToggle } from "../themeToggle";
 import { Button } from "../ui/button";
 import { Searchbar } from "./searchbar";
+import { NavMenu } from "./navMenu";
 
 export const Navbar = () => {
   const { userId } = useAuth();
@@ -15,6 +16,7 @@ export const Navbar = () => {
         <Searchbar />
         <div className="flex space-x-4 items-center">
           <ModeToggle />
+          <NavMenu />
           {userId ? (
             <UserButton />
           ) : (
